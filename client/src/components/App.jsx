@@ -7,6 +7,8 @@ import LandingPage from './LandingPage.jsx';
 import RacePage from './RacePage.jsx';
 import ClassPage from './ClassPage.jsx';
 import ChooseAbilitiesPage from './ChooseAbilitiesPage.jsx';
+import AbilityScores from './AbilityScores.jsx';
+
 
 const App = () => {
   const {page, setPage} = useContext(PageContext);
@@ -23,11 +25,12 @@ const App = () => {
       .then((results) => {
         setCharacterInfo(results.data.rows)
       })
+      .catch((err) => {console.log(err)})
   }
 
   // useEffect(() => {
   //   getCharacterInfo()
-  // }, [page])
+  // }, [])
 
   const renderPage = () => {
     if (page === 0) {
@@ -44,7 +47,11 @@ const App = () => {
       )
     } else if (page === 3) {
       return (
-        <ChooseAbilitiesPage characterInfo={characterInfo} getCharacterInfo={getCharacterInfo} />
+        <ChooseAbilitiesPage setPage={setPage} currentChar={currentChar}/>
+      )
+    } else if (page === 4) {
+      return (
+        <AbilityScores />
       )
     }
   }

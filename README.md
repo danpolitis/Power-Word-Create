@@ -6,6 +6,11 @@ Power Word Create is a character creation web application for the popular Dungeo
 
 The project currently contains several pages relating to the various customizable parts of D&D character creation. Upon loading the page the viewer will be greeted with a landing page where they can sign-in, sing-up, or begin creating a character. Once a user has started creating a character they will be able to navigate through multiple pages. The first page shows all the races along with their descriptions and allows a user to choose one. Next is a similarly designed class page. After that they will be taken to a page that asks them to choose their class features and level. Next a player can roll for their ability scores or choose the standard array for ability scores. After that they will be taken to an equipment page. All the information has been loaded from the free Dungeons & Dragons API onto a PostgreSQL database.
 
+### Tech Stack
+
+Front-End: React, Bootstrap, CSS, HTML</br>
+Back-End: Node, Express, Webpack, Babel, PostgreSQL
+
 ## Getting Started
 
 ### Dependencies
